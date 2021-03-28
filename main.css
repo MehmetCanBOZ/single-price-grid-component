@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+
+--cyan: hsl(179, 62%, 43%);
+--brightYellow: hsl(71, 73%, 54%);
+--lightGray: hsl(204, 43%, 93%);
+--grayishBlue: hsl(218, 22%, 67%);
+--clrprimary:hsl(179, 62%, 43%);
+--clr-neutral-600:hsl(179, 60%, 40%);
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--lightGray);
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+.wrapper{
+    max-width: 310px;
+    display: grid;
+    margin:4rem auto;
+    grid-template-columns: 310px;
+  
+    
+}
+.header{
+background-color: white;
+padding: 1.5rem;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+padding-top: 2rem;
+}
+.header h3{
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+.header_description{
+    color:var(--grayishBlue);
+    font-weight: 400;
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
+}
+.offer{
+color: var(--brightYellow);
+font-weight: 700;
+margin-bottom: 1rem;
+}
+.subscription{
+background-color: var(--clr-neutral-600);
+padding: 1.5rem;
+color: white;
+}
+.subscription h3{
+    margin-bottom: 1rem;
+}
+.subscription h1{
+    position: relative;
+}
+.subscription_description{
+    color:var(--lightGray);
+}
+
+span{
+    position: absolute;
+    font-weight: 400;
+    font-size: 1rem;
+    color:var(--lightGray);
+    bottom: 24%;
+    left: 29%;
+    
+}
+.info{
+    background-color: var(--clrprimary);
+    padding: 1.5rem;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.info_description{
+margin-top: 1rem;
+font-weight: 400;
+font-size: 0.85rem;
+line-height: 1.7;
+text-align: left;
+padding-right: 5rem;
+color:var(--lightGray);
+}
+button{
+    width: 100%;
+    border-radius: 0.4rem;
+    border:0px;
+    background-color: var(--brightYellow);
+    font-weight: 700;
+    padding: 0.75rem 0;
+    margin-top: 2rem;
+    color: white;
+}
+
+@media screen and (min-width: 700px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        max-width: 640px;
+        grid-template-columns:1fr 1fr;
+    }
+    .header{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        padding-left: 2rem;
+        
+    }
+    .header_description{
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+    .header  h3{
+        font-size: 1.5rem;
+    }
+    .subscription{
+        border-bottom-left-radius:8px;
+        padding: 2rem;
+        
+    }
+  
+    .info{     
+        padding: 1rem;
+        color: white;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 8px;
+        padding: 2rem;
+    }
+
+  }
